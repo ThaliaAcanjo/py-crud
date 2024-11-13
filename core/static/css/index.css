@@ -1,0 +1,331 @@
+:root {
+    --color-light: #28a745; /* Verde para modo claro #28a745*/
+    --color-dark: #52c41a; /* Verde para modo escuro */
+    --text-color-light: black;
+    --text-color-dark: white;
+    --title-text-dark: #007000;
+    --background-dark: #1b1b1b;
+    --border: #575757;
+    --background-default: #f8f9fa
+}
+
+a{
+    text-decoration: none !important;
+    color: black !important;
+}
+
+body {
+    margin: 20px 30px !important;
+    background-color: var(--background-default) !important; //#f8f9fa
+    color: #333;
+}
+
+body[data-theme="dark"] {
+    background-color: var(--background-dark) !important;
+    //color: #eaeaea;
+}
+
+body[data-theme="light"] input::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+body[data-theme="dark"] input[type="search"] {
+    background-color: #333;
+    color: #f1f1f1;
+    border-color: #444;
+}
+
+body[data-theme="dark"] input[type="search"]::placeholder {
+    color: #bbb;
+
+}
+
+body[data-theme="dark"] input[type="search"]:focus {
+    background-color: #444;
+    color: #fff;
+    border-color: #666;
+}
+
+body[data-theme="dark"] input::placeholder {
+    color: #b0b0b0;
+    opacity: 1;
+}
+
+.title{
+    color: var(--title-text-light) !important;
+
+}
+body[data-theme="dark"] .title{
+    color: var(--title-text-dark) !important;
+
+}
+
+body[data-theme="dark"] .navbar{
+    background-color: var(--background-dark) !important;
+    color: var(--title-text-dark) !important;
+}
+
+.title-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar>.container-fluid>form{
+    //align-items: center !important;
+    //margin-left: 10px;
+    width: 100% !important;
+}
+
+.navbar>.container-fluid{
+    //justify-content: flex-start !important;
+
+}
+
+body[data-theme="dark"] .input-group>.input-group-text,
+body[data-theme="dark"] .input-group>.form-control {
+    background-color: var(--background-dark) !important;
+    color: var(--color-dark);
+    border-color: var(--border);
+}
+
+body[data-theme="dark"] .input-group>.form-control {
+    color: var(--text-color-dark);
+
+}
+
+.me-2{
+    margin-right: 0 !important;
+
+}
+
+.top{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+    >.row-new{
+        display: flex;
+        justify-content: space-between;
+        color: var(--text-color-light);
+    }
+}
+body[data-theme="dark"] .row-new{
+    color: var(--text-color-dark)
+}
+
+.btn-new, .btn-save{
+   color: var(--text-color-light) !important;
+   background-color: var(--color-light)  !important;
+}
+body[data-theme="dark"] .btn-new,
+body[data-theme="dark"] .btn-save{
+   color: var(--text-color-dark) !important;
+   background-color: var(--color-dark)  !important;
+   font-weight: bold;
+}
+
+.results-query{
+    height: 40px;
+    color: var(--text-color-light);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+body[data-theme="dark"] .results-query{
+    color: var(--text-color-dark);
+
+}
+
+.exit-filter{
+    height: 25px;
+    background-color: #28a74559;
+    margin: 5px;
+    border-radius: 10px;
+    width: auto;
+}
+body[data-theme="dark"] .exit-filter{
+    background-color: #93b486;
+
+}
+
+.breadcrumb{
+    color: var(--text-color-dark) !important;
+
+}
+body[data-theme="dark"] a{
+    color: var(--text-color-dark) !important;
+
+}
+
+.breadcrumb-item{
+    color: var(--text-color-light) !important;
+    font-size: small;
+}
+body[data-theme="dark"] .breadcrumb-item{
+    color: var(--text-color-dark) !important;
+
+}
+
+.breadcrumb-item .active{
+    color: grey !important;
+}
+
+.pagination>.page-item,
+.pagination .page-link{
+    color: black !important;
+
+}
+
+body[data-theme="dark"] .pagination>.page-item,
+body[data-theme="dark"] .pagination .page-link{
+    color: white !important;
+    background-color: #121212 !important;
+    border-color: var(--border) !important;
+}
+
+.pagination .page-item:hover {
+    transform: scale(1.05);
+
+}
+
+.pagination .page-item.active,
+.active>.page-link,
+.page-link.active  {
+    background-color: var(--color-light) !important;
+    color: var(--text-light);
+    font-weight: bold !important;
+    border-color: var(--color-light) !important;
+}
+
+body[data-theme="dark"] .pagination .page-item.active,
+body[data-theme="dark"] .active>.page-link,
+body[data-theme="dark"] .page-link.active  {
+    background-color: var(--color-dark) !important;
+    color: var(--text-dark);
+    border-color: var(--color-dark) !important;
+}
+
+.pagination .page-item-number:hover,
+.page-link:hover  {
+    background-color: rgba(220, 220, 220, 0.7) !important;
+    color: black !important;
+    border-color: var(--bs-border-color) !important
+}
+
+.pagination .page-link.disabled {
+    background-color: #d6d6d6;
+    color: #b0b0b0;
+}
+
+.container-table{
+    width: 100%;
+    height: auto;//250px;
+    //background-color: blue;
+}
+
+.btn-edit,
+.btn-delete{
+    opacity: 0.1;
+    pointer-events: none;
+    transition: opacity 0.1s ease;
+    color: var(--color-light); //#52c41a
+}
+
+body[data-theme="dark"] .btn-edit,
+body[data-theme="dark"] .btn-delete {
+    color: var(--color-dark);
+
+}
+
+.person-row:hover .btn-edit,
+.person-row:hover .btn-delete{
+    opacity: 1;
+    pointer-events: auto;
+    transition(0.1)
+}
+
+
+.bg-body-tertiary{
+    background-color: var(--background-default) !important;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+body[data-theme="dark"] .slider {
+    color: var(--background-dark);
+
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.8s;
+    border-radius: 50%;
+}
+body[data-theme="dark"] .slider:before {
+    background-color: var(--background-dark);
+
+}
+
+input:checked + .slider {
+    background-color: var(--color-dark); /* color "On" */
+
+}
+
+/* Change the position of the circle on the right side */
+input:checked + .slider:before {
+    transform: translateX(26px);
+
+}
+
+.form-update{
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100vh;
+    margin-top: 20px;
+    //background-color: green;
+    >.form-data-container{
+        width: 100%;
+    }
+    >.form-btn{
+        margin: 10px;
+    }
+}
+
+.name{
+    background-color: red;
+}
